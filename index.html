@@ -5,9 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Pirates Birkerød 2026</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: sans-serif;
-            margin: 2rem;
+            margin: 0;
+            padding: 1.25rem;
+            line-height: 1.4;
+            color: #111;
+            background: #f7f7f8;
+        }
+
+        .page {
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(1.4rem, 4vw, 2rem);
+        }
+
+        .intro {
+            margin: 0.75rem 0 0;
+            font-size: clamp(0.95rem, 2.5vw, 1.05rem);
         }
 
         .thumb-grid {
@@ -15,14 +38,13 @@
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 1rem;
             margin-top: 1rem;
-            max-width: 980px;
         }
 
         .thumb-link {
             text-decoration: none;
             color: #111;
             border: 1px solid #ddd;
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
             background: #fff;
@@ -32,7 +54,7 @@
         .thumb-link img {
             display: block;
             width: 100%;
-            height: 160px;
+            aspect-ratio: 16 / 10;
             object-fit: cover;
         }
 
@@ -45,7 +67,7 @@
 
         @media (max-width: 640px) {
             body {
-                margin: 1rem;
+                padding: 0.9rem;
             }
 
             .thumb-grid {
@@ -54,30 +76,36 @@
             }
 
             .thumb-link img {
-                height: 180px;
+                aspect-ratio: 16 / 9;
+            }
+
+            .thumb-link span {
+                padding: 0.7rem;
             }
         }
     </style>
 </head>
 <body>
-    <h1>Coding Pirates Birkerød 2026</h1>
-    <p>Towerdefence projekt lavet af Otto, Sayul og William i løbet af forår 2026 hos Coding Pirates Birkerød</p>
+    <div class="page">
+        <h1>Coding Pirates Birkerød 2026</h1>
+        <p class="intro">Towerdefence projekt lavet af Otto, Sayul og William i løbet af forår 2026 hos Coding Pirates Birkerød</p>
 
-    <div class="thumb-grid">
-        <a class="thumb-link" href="./otto-td/index.html">
-            <img src="./images/otto-td.png" alt="Otto tower defence thumbnail">
-            <span>Otto</span>
-        </a>
+        <div class="thumb-grid">
+            <a class="thumb-link" href="./otto-td/index.html">
+                <img src="./images/otto-td.png" alt="Otto tower defence thumbnail">
+                <span>Otto</span>
+            </a>
 
-        <a class="thumb-link" href="./sayul-td/index.html">
-            <img src="./images/sayul-td.png" alt="Sayul tower defence thumbnail">
-            <span>Sayul</span>
-        </a>
+            <a class="thumb-link" href="./sayul-td/index.html">
+                <img src="./images/sayul-td.png" alt="Sayul tower defence thumbnail">
+                <span>Sayul</span>
+            </a>
 
-        <a class="thumb-link" href="./william-td/index.html">
-            <img src="./images/william-td.png" alt="William tower defence thumbnail">
-            <span>William</span>
-        </a>
+            <a class="thumb-link" href="./william-td/index.html">
+                <img src="./images/william-td.png" alt="William tower defence thumbnail">
+                <span>William</span>
+            </a>
+        </div>
     </div>
 </body>
 </html>
